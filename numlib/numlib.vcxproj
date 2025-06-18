@@ -19,10 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\matrix\mat4f.c" />
+    <ClInclude Include="include\matrix\mat.h" />
+    <ClInclude Include="include\matrix\mat2x2f.h" />
+    <ClInclude Include="include\matrix\mat3x3f.h" />
+    <ClInclude Include="include\matrix\mat4x4f.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\matrix\mat.h" />
+    <ClCompile Include="src\matrix\mat.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -130,7 +133,7 @@ xcopy /E /I /Y "$(ProjectDir)include" "$(SolutionDir)deps\include"
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)numlib\include</AdditionalIncludeDirectories>
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
@@ -139,9 +142,7 @@ xcopy /E /I /Y "$(ProjectDir)include" "$(SolutionDir)deps\include"
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(TargetPath)" "$(SolutionDir)deps\lib\$(TargetFileName)"
-
-xcopy /E /I /Y "$(ProjectDir)include" "$(SolutionDir)deps\include"
+      <Command>copy /Y $(TargetDir)numlib.lib $(SolutionDir)numlib-tests\numlib.lib
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -155,7 +156,7 @@ xcopy /E /I /Y "$(ProjectDir)include" "$(SolutionDir)deps\include"
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)numlib\include</AdditionalIncludeDirectories>
       <CompileAs>CompileAsC</CompileAs>
     </ClCompile>
     <Link>
@@ -164,9 +165,7 @@ xcopy /E /I /Y "$(ProjectDir)include" "$(SolutionDir)deps\include"
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(TargetPath)" "$(SolutionDir)deps\lib\$(TargetFileName)"
-
-xcopy /E /I /Y "$(ProjectDir)include" "$(SolutionDir)deps\include"
+      <Command>copy /Y $(TargetDir)numlib.lib $(SolutionDir)numlib-tests\numlib.lib
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
