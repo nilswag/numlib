@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\add.c" />
+    <ClCompile Include="src\matrix\mat4f.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\add.h" />
+    <ClInclude Include="include\matrix\mat.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

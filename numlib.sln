@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36203.30 d17.14
+VisualStudioVersion = 17.14.36203.30
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "numlib", "numlib\numlib.vcxproj", "{2F338F34-E84C-4DA7-B0A5-766F4D3BCB60}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "numlib-tests", "numlib-tests\numlib-tests.vcxproj", "{E0EAB463-3FE6-49F8-A9F7-4BC7B4059891}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F338F34-E84C-4DA7-B0A5-766F4D3BCB60} = {2F338F34-E84C-4DA7-B0A5-766F4D3BCB60}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deps", "deps", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject

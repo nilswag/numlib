@@ -1,9 +1,7 @@
 #include <stdio.h>
 
-#include <add.h>
-
 int main(void)
 {
-	printf("%f\n", add(1, 2));
+	printf("Hello World!\n");
 	return 0;
 }
