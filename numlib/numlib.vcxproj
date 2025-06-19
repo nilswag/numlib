@@ -19,10 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\numlib.h" />
     <ClInclude Include="include\matrix\mat.h" />
-    <ClInclude Include="include\matrix\mat2x2f.h" />
-    <ClInclude Include="include\matrix\mat3x3f.h" />
-    <ClInclude Include="include\matrix\mat4x4f.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\matrix\mat.c" />

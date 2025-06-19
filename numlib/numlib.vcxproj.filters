@@ -18,13 +18,7 @@
     <ClInclude Include="include\matrix\mat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\matrix\mat2x2f.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\matrix\mat3x3f.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\matrix\mat4x4f.h">
+    <ClInclude Include="include\numlib.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
