@@ -20,10 +20,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\numlib.h" />
-    <ClInclude Include="include\matrix\mat.h" />
+    <ClInclude Include="include\core\mat.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\matrix\mat.c" />
+    <ClCompile Include="src\core\mat.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

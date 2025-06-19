@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\matrix\mat.h">
+    <ClInclude Include="include\core\mat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\numlib.h">
@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\matrix\mat.c">
+    <ClCompile Include="src\core\mat.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
