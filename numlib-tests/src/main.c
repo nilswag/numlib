@@ -2,9 +2,11 @@
 #include "test_registry.h"
 
 extern void test_numlib_matf_multiply(void);
+extern void test_numlib_matf_identity(void);
 
 test_entry_t tests[] = {
-    REGISTER_TEST(test_numlib_matf_multiply)
+    REGISTER_TEST(test_numlib_matf_multiply),
+    REGISTER_TEST(test_numlib_matf_identity)
 };
 
 int test_count = sizeof(tests) / sizeof(test_entry_t);
