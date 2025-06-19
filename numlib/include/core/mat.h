@@ -34,6 +34,9 @@ numlib_error_t numlib_matf_multiply(
  * @param ah - The amount of rows of matrix a.
  * @param aw - The amount of columns of matrix a.
  * @param a - Pointer to the array of matrix a.
+ * 
+ * @return numlib_error_t - NUMLIB_SUCCES on success, or
+ *      NUMLIB_ERR_INVALID_MAT_ARR on invalid array pointer.
  */
 numlib_error_t numlib_matf_identity(
     size_t ah,
