@@ -1,15 +1,20 @@
+#include <stddef.h>
+#include "numlib.h"
 #include "core/mat.h"
 
 numlib_error_t numlib_matf_multiply(
-    int ah,
-    int aw,
-    int bh,
-    int bw,
+    size_t ah,
+    size_t aw,
+    size_t bh,
+    size_t bw,
     float* a,
     float* b,
     float* c
 ) {
-    if (aw != bh) return NUMLIB_ERR_SIZE_MISMATCH;
+    if (a == NULL || b == NULL || c == NULL)
+        return NUMLIB_ERR_INVALID_MAT_ARR;
+    if (aw != bh)
+        return NUMLIB_ERR_SIZE_MISMATCH;
     /*
         A: ah x aw (M x N)
         B: bh x bw (N x P) -> ah = bw
@@ -29,4 +34,20 @@ numlib_error_t numlib_matf_multiply(
         }
     }
     return NUMLIB_SUCCESS;
+}
+
+numlib_error_t numlib_matf_identity(
+    size_t ah,
+    size_t aw,
+    float* a
+) {
+    if (a == NULL)
+        return NUMLIB_ERR_INVALID_MAT_ARR;
+    for (int i = 0; i < ah; i++)
+    {
+        for (int j = 0; j < aw; j++)
+        {
+            a[i * ah + j] = (i == j) ? 1.0f : 0.0f;
+        }
+    }
 }
