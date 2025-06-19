@@ -13,10 +13,10 @@
  * @param b - Pointer to the array of matrix b.
  * @param c - Pointer to the array of result matrix c.
  * 
- * @return numlib_error - NUMLIB_SUCCESS on success, or
+ * @return numlib_error_t - NUMLIB_SUCCESS on success, or
  *      NUMLIB_ERR_SIZE_MISMATCH on incompatible matrix size.
  */
-numlib_error numlib_matf_multiply(
+numlib_error_t numlib_matf_multiply(
     int ah,
     int aw,
     int bh,

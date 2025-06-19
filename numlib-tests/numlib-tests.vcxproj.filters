@@ -18,5 +18,11 @@
     <ClCompile Include="src\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\test_core.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="include\test_registry.h">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

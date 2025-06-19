@@ -1,6 +1,6 @@
 #include "core/mat.h"
 
-numlib_error numlib_matf_multiply(
+numlib_error_t numlib_matf_multiply(
     int ah,
     int aw,
     int bh,
