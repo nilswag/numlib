@@ -20,12 +20,12 @@ numlib_error_t numlib_matf_multiply(
         B: bh x bw (N x P) -> ah = bw
         C: ah x bw (M x N)
     */
-    for (int i = 0; i < ah; i++) // rows (a & c)
+    for (size_t i = 0; i < ah; i++) // rows (a & c)
     {
-        for (int j = 0; j < bw; j++) // columns (b & c)
+        for (size_t j = 0; j < bw; j++) // columns (b & c)
         {
             float sum = 0.0f; // reset value in c
-            for (int k = 0; k < aw; k++)
+            for (size_t k = 0; k < aw; k++)
             {
                 //     a[i][k]      *  b[k][j]
                 sum += a[i * aw + k] * b[k * bw + j];
@@ -43,11 +43,12 @@ numlib_error_t numlib_matf_identity(
 ) {
     if (a == NULL)
         return NUMLIB_ERR_INVALID_MAT_ARR;
-    for (int i = 0; i < ah; i++)
+    for (size_t i = 0; i < ah; i++)
     {
-        for (int j = 0; j < aw; j++)
+        for (size_t j = 0; j < aw; j++)
         {
-            a[i * ah + j] = (i == j) ? 1.0f : 0.0f;
+            a[i * aw + j] = (i == j) ? 1.0f : 0.0f;
         }
     }
+    return NUMLIB_SUCCESS;
 }
