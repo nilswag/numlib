@@ -3,6 +3,16 @@
 #include "numlib.h"
 
 /**
+ * @brief Represents a floating-point matrix.
+ */
+typedef struct
+{
+    float* arr;     /** Pointer to dynamically allocated array of matrix. */
+    size_t rows;    /** Number of rows of matrix. */
+    size_t cols;    /** Number of columns of matrix. */
+} numlib_matf_t;
+
+/**
  * @brief Multiplies a mxn matrix a with a nxp matrix b.
  * 
  * @param ah - The amount of rows of matrix a.
@@ -43,3 +53,27 @@ numlib_error_t numlib_matf_identity(
     size_t aw,
     float* a
 );
+
+/**
+ * @brief Macro for generating fixed size matrices and functions.
+ */
+#define NUMLIB_MATF_FIXED(dim, name)                                                                \
+                                                                                                    \
+typedef struct                                                                                      \
+{                                                                                                   \
+    float arr[dim * dim];                                                                           \
+} numlib_##name##_t;                                                                                \
+                                                                                                    \
+inline static numlib_error_t numlib_##name##_mult(                                                  \
+    numlib_##name##_t* a,                                                                           \
+    numlib_##name##_t* b,                                                                           \
+    numlib_##name##_t* c                                                                            \
+) {                                                                                                 \
+    return numlib_matf_multiply(dim, dim, dim, dim, a->arr, b->arr, c->arr);                        \
+}                                                                                                   \
+                                                                                                    \
+inline static numlib_error_t numlib_##name##_identity(                                              \
+    numlib_##name##_t* a                                                                            \
+) {                                                                                                 \
+    return numlib_matf_identity(dim, dim, a->arr);                                                  \
+}

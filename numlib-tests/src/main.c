@@ -3,10 +3,14 @@
 
 extern void test_numlib_matf_multiply(void);
 extern void test_numlib_matf_identity(void);
+extern void test_numlib_matf2x2_identity(void);
+extern void test_numlib_matf2x2_mult(void);
 
 test_entry_t tests[] = {
     REGISTER_TEST(test_numlib_matf_multiply),
-    REGISTER_TEST(test_numlib_matf_identity)
+    REGISTER_TEST(test_numlib_matf_identity),
+    REGISTER_TEST(test_numlib_matf2x2_identity),
+    REGISTER_TEST(test_numlib_matf2x2_mult)
 };
 
 int test_count = sizeof(tests) / sizeof(test_entry_t);
